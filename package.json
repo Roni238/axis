@@ -1,0 +1,28 @@
+{
+  "name": "base",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^2.2.1",
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/sitemap": "^8.0.13",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@studio-freight/lenis": "^1.0.42",
+    "embla-carousel-vue": "^8.6.0",
+    "gsap": "^3.14.2",
+    "nuxt": "^4.4.2",
+    "vue": "^3.5.30",
+    "vue-router": "^5.0.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}
