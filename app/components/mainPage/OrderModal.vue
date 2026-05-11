@@ -36,8 +36,8 @@
         </div>
 
         <form @submit.prevent="handleSubmit" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-          <UiBaseInput v-model="formData.name" label="Полное имя" placeholder="" />
-          <UiBaseInput v-model="formData.email" type="email" label="Email" required />
+          <UiBaseInput v-model="formData.name" label="Полное имя" placeholder="John Doe" />
+          <UiBaseInput v-model="formData.email" type="email" label="Email" required placeholder="JohnDoe@exemple.com"/>
 
           <div class="col-span-full flex flex-col gap-2 relative group">
             <label class="text-[10px] uppercase tracking-[0.3em] text-text-muted font-mono mb-2" for="lot-select">

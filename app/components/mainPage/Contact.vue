@@ -74,10 +74,10 @@ const resetForm = () => {
 
       <div class="lg:col-span-7 relative flex flex-col justify-center">
         <form class="flex flex-col gap-10 lg:gap-14" v-if="!isSubmitted" ref="formRef" @submit.prevent="handleSubmit">
-
+          
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14">
-            <UiBaseInput v-model="form.name" label="ФИО" required />
-            <UiBaseInput v-model="form.email" type="email" label="Email" required />
+            <UiBaseInput placeholder="John Doe" v-model="form.name" label="ФИО" required />
+            <UiBaseInput placeholder="JohnDoe@exemple.com" v-model="form.email" type="email" label="Email" required />
           </div>
 
           <UiBaseInput v-model="form.message" label="Сообщение / Интересный лот" />

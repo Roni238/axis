@@ -1,7 +1,7 @@
 <template>
   <div class="relative group w-full">
     <input class="peer w-full bg-transparent border-b border-primary py-4 text-lg outline-none focus:border-accent-red transition-all resize-none min-h-[60px] text-white" 
-    v-model="model" v-bind="$attrs" placeholder=" " :id="inputId">
+    v-model="model" v-bind="$attrs" :placeholder="$attrs.placeholder || ' '" :id="inputId">
     
     <label 
       :for="inputId"
@@ -23,3 +23,32 @@ const inputId = useId()
 
 defineProps({ label: String })
 </script>
+
+<style scoped>
+input::placeholder {
+  transition: opacity 0.2s ease;
+  opacity: 0;
+}
+
+input:focus::placeholder {
+  opacity: 0.8;
+}
+
+input:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+input::-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+input:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+</style>
